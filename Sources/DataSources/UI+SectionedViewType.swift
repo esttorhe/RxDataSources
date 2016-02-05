@@ -114,7 +114,7 @@ public protocol SectionedViewType {
 
 func _performBatchUpdates<V: SectionedViewType, S: SectionModelType>(view: V, changes: Changeset<S>) {
     typealias I = S.Item
-    let rowAnimation = UITableViewRowAnimation.Automatic
+    let rowAnimation = UITableViewRowAnimation.Top
     
     view.deleteSections(changes.deletedSections, animationStyle: rowAnimation)
     // Updated sections doesn't mean reload entire section, somebody needs to update the section view manually
